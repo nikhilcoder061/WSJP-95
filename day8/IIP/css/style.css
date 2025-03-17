@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    width: 1170px;
+    height: 1000px;
+    background-color: white;
+    margin: auto;
+}
+
+/* top header css start  */
+.top-header {
+    width: 100%;
+    height: 40px;
+    background-color: #343130;
+}
+
+.top-contact {
+    width: 24%;
+    height: 100%;
+}
+
+.top-img {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.top-content {
+    float: left;
+    margin-top: 10px;
+    color: white;
+}
+
+/* top header css end */
+
+
+/* main header css start  */
+.main-header {
+    width: 100%;
+    height: 140px;
+}
+
+.logo {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.logo-img {
+    margin-top: 15px;
+}
+
+.navMenu {
+    width: 65%;
+    float: right;
+    margin-top: 100px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navItem {
+    float: left;
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+/* main header css end */

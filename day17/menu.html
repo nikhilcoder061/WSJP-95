@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .menu>ul {
+            display: flex;
+            list-style: none;
+            background-color: lightblue;
+        }
+
+        .menu>ul>li {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid black;
+        }
+
+        .course {
+            position: relative;
+        }
+
+        .course ul {
+            position: absolute;
+            list-style: none;
+            
+            top: 100%;
+            left: -100px;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .course li {
+            padding: 10px 15px;
+            background-color: lightcoral;
+            transition: 0.5s;
+        }
+
+        .course:hover ul {
+            left: 0%;
+            opacity: 1;
+        }
+
+        .course li:hover{
+            background-color: black;
+            color: white;
+            text-decoration: underline;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li class="course">Course
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Tailwind</li>
+                    <li>React JS</li>
+                </ul>
+            </li>
+            <li>Gallery</li>
+            <li>Contact Us</li>
+            <li>Enquiry</li>
+        </ul>
+    </div>
+</body>
+
+</html>

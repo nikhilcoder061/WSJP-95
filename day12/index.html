@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            display: none;
+        }
+
+        .main:hover .box {
+            display: block;
+        }
+
+        .text {
+            display: none;
+        }
+        .main:hover .text{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box"></div>
+        <h1 class="text">Welcome to ws</h1>
+    </div>
+
+
+</body>
+
+</html>
