@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 1000px;
+            height: 500px;
+            border: 1px solid black;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .para {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: justify;
+            box-sizing: border-box;
+            transition: 0.5s;
+            color: white;
+            transform-origin: top left;
+        }
+
+        .box:hover .para {
+            /* transform: scaleY(1); */
+            transform: rotate(90deg);
+        }
+
+        .img1{
+            transition: 0.5s;
+            transform-origin: bottom right;
+        }
+
+        .box:hover .img1 {
+            transform: rotate(90deg);
+            /* transform: scale(0); */
+            /* transform: translateX(300px); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <img class="img1" src="https://picsum.photos/id/234/300/300" alt="">
+            <div class="para">
+                <img src="https://picsum.photos/id/235/300/300" alt="">
+                <!-- <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, quod, quasi harum quia odit
+                    mollitia
+                    minima assumenda reprehenderit voluptatem, unde deserunt quae deleniti dolorem saepe non reiciendis
+                    magni autem. Soluta?
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, quod, quasi harum quia odit
+                    mollitia
+                    minima assumenda reprehenderit voluptatem, unde deserunt quae deleniti dolorem saepe non reiciendis
+                    magni autem. Soluta?
+                </p> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
