@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 500px;
+            height: 500px;
+            /* border: 1px solid black;
+            margin: auto; */
+        }
+
+        .box {
+            display: flex;
+            background-color: lightblue;
+            gap: 10px;
+        }
+
+        .menu {
+            padding: 10px 15px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .home::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            position: absolute;
+            top: 77%;
+            left: 24px;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="menu home">
+                Home
+            </div>
+            <div class="menu">
+                About
+            </div>
+            <div class="menu">
+                Course
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
