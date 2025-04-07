@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 id="heading">Welcome to WS</h1>
+    <h2 id="heading2">How are you</h2> -->
+
+    <input type="text" placeholder="Enter your name" id="input" name="inputName" value="hello">
+
+    <button onclick="getData()">Click Me</button>
+
+
+</body>
+<script>
+
+    var input = document.getElementById('input');
+
+    function getData() {
+        console.log(input.value);
+    }
+
+
+    // var heading = document.getElementById('heading');
+    // var heading2 = document.getElementById('heading2');
+
+    // // console.log(heading);
+    // console.log(heading2);
+
+</script>
+
+</html>

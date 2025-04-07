@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="input1">
+    <br>
+    <input type="text" id="input2">
+    <br>
+    <button onclick="addData()">sum</button>
+    <br>
+    <input type="text" id="input3">
+
+</body>
+<script>
+
+    var input1 = document.getElementById('input1');
+    var input2 = document.getElementById('input2');
+    var input3 = document.getElementById('input3');
+
+    function addData() {
+
+        var num1 = Number(input1.value);
+        var num2 = Number(input2.value);
+
+        input3.value = num1 + num2;
+    }
+
+
+</script>
+
+</html>
