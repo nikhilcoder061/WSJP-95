@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para {
+            background-color: lightblue;
+            color: red;
+            font-size: 25px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="addCss">Add</button>
+    <button id="removeCss">Remove</button>
+    <button id="toggleCss">Toggle</button>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas nemo, unde est praesentium ex quaerat,
+        perferendis autem labore placeat eius maiores sequi aspernatur hic laudantium itaque voluptatem, expedita iste.
+        Tempora.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas nemo, unde est praesentium ex quaerat,
+        perferendis autem labore placeat eius maiores sequi aspernatur hic laudantium itaque voluptatem, expedita iste.
+        Tempora.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas nemo, unde est praesentium ex quaerat,
+        perferendis autem labore placeat eius maiores sequi aspernatur hic laudantium itaque voluptatem, expedita iste.
+        Tempora.
+    </p>
+</body>
+<script>
+
+    var addCss = document.querySelector('#addCss');
+    var removeCss = document.querySelector('#removeCss');
+    var toggleCss = document.querySelector('#toggleCss');
+
+    var para = document.querySelector('p');
+
+    addCss.addEventListener('click', function () {
+        para.classList.add('para')
+    })
+
+    removeCss.addEventListener('click', function () {
+        para.classList.remove('para');
+    })
+
+    toggleCss.addEventListener('click', function () {
+        para.classList.toggle('para');
+    })
+
+    // classList.add()
+    // classList.remove()
+    // classList.toggle()
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            text-align: center;
+            font-size: 25px;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        Hello
+    </div>
+    <br>
+    <button onclick="addCss()">Add</button>
+    <button onclick="removeCss()">Remove</button>
+    <button onclick="toggleCss()">Toggle</button>
+
+
+</body>
+<script>
+
+    var box = document.querySelector('.box');
+
+    function addCss() {
+        box.style.background = "red";
+        box.style.color = "white";
+        box.style.fontSize = "40px";
+        box.style.transform = "skew(5deg)";
+        box.style.fontWeight = "bold"
+        box.style.border = "5px solid green"
+    }
+
+    function removeCss() {
+        box.style.background = "none";
+        box.style.color = ""
+        box.style.fontSize = "";
+        box.style.transform = "skew(0deg)";
+        box.style.fontWeight = ""
+        box.style.border = ""
+    }
+
+    function toggleCss() {
+        if (box.style.background == "red") {
+            box.style.background = "none"
+        } else {
+            box.style.background = "red";
+        }
+    }
+
+
+</script>
+
+</html>

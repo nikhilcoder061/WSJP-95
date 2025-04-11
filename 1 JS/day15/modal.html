@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .model {
+            width: 500px;
+            height: 350px;
+            background-color: lightcoral;
+            border-radius: 40px;
+            position: relative;
+            transform: translateY(-600px);
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .model span {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+
+        }
+
+        .showModel {
+            transform: translate(0px);
+            opacity: 1;
+        }
+
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+        .showOverlay {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Click me</button>
+    <div class="overlay"></div>
+    <div class="main">
+        <div class="model">
+            <span>X</span>
+        </div>
+    </div>
+</body>
+<script>
+
+    var model = document.querySelector('.model');
+    var btn = document.querySelector('#btn');
+    var close = document.querySelector('span');
+    var overlay = document.querySelector('.overlay');
+
+    btn.addEventListener('click', function () {
+        model.classList.add('showModel');
+        overlay.classList.add('showOverlay');
+    })
+
+    close.addEventListener('click', closeModel)
+
+    overlay.addEventListener('click', closeModel)
+
+
+    function closeModel() {
+        model.classList.remove('showModel');
+        overlay.classList.remove('showOverlay');
+    }
+
+
+</script>
+
+</html>
