@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .todo {
+            width: 600px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .input {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input input {
+            width: 80%;
+            padding: 10px 15px;
+        }
+
+        .input button {
+            padding: 10px 15px;
+        }
+
+        .allToDo {
+            margin: 10px 0px;
+        }
+
+        .allToDo li {
+            list-style: none;
+            background-color: lightblue;
+            padding: 10px 15px;
+            margin: 10px 0px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .allToDo button {
+            background-color: red;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 0px 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .doneToDo {
+            background-color: gray !important;
+            text-decoration: line-through !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="todo">
+            <div class="input">
+                <input type="text" id="input">
+                <button id="addTodo">Add Todo</button>
+            </div>
+            <div class="allToDo">
+                <ul class="allList">
+                    <!-- <li onclick="selectToDo()" oncontextmenu="deleteList()">
+                        <span> Hello Everyone</span>
+                        <button>&times;</button>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    var addTodo = document.querySelector('#addTodo');
+    var allList = document.querySelector('.allList');
+    var input = document.querySelector('#input');
+
+
+
+    addTodo.addEventListener('click', function () {
+
+        if (input.value != "") {
+            allList.innerHTML = allList.innerHTML + `<li onclick="selectToDo(this)" oncontextmenu="deleteList(this)">
+                                                        <span> ${input.value}</span>
+                                                        <button onclick="deleteToDo(this)">&times;</button>
+                                                    </li>`;
+
+            input.value = "";
+        }
+
+    })
+
+    function selectToDo(list) {
+        list.classList.toggle('doneToDo');
+    }
+
+    function deleteToDo(item) {
+        item.parentNode.remove();
+    }
+
+    function deleteList(list) {
+        list.remove();
+    }
+
+
+</script>
+
+</html>
