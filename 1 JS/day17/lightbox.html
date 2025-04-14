@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .mainImg {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            transform: scale(0);
+            transition: 0.3s;
+        }
+
+        .mainImg img {
+            width: 800px;
+        }
+
+        .mainImg span {
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            color: white;
+            position: fixed;
+            top: 40px;
+            right: 380px;
+        }
+
+        .otherImage img {
+            width: 90px;
+            height: 80px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="mainImg">
+            <img src="https://picsum.photos/id/237/600/400" alt="">
+            <span>X</span>
+        </div>
+        <div class="otherImage">
+            <img onclick="openImg(this)" src="https://picsum.photos/id/232/600/400" alt="">
+            <img onclick="openImg(this)" src="https://picsum.photos/id/233/600/400" alt="">
+            <img onclick="openImg(this)" src="https://picsum.photos/id/234/600/400" alt="">
+            <img onclick="openImg(this)" src="https://picsum.photos/id/235/600/400" alt="">
+            <img onclick="openImg(this)" src="https://picsum.photos/id/236/600/400" alt="">
+        </div>
+    </div>
+</body>
+<script>
+
+    var mainImg = document.querySelector('.mainImg');
+    var closeImg = document.querySelector('.mainImg span');
+    var showImg = document.querySelector('.mainImg img');
+
+
+    function openImg(img) {
+        mainImg.style.transform = "scale(1)";
+        showImg.src = img.src;
+        console.log(showImg.src);
+        console.log(img.src);
+    }
+
+    closeImg.addEventListener('click', function () {
+        mainImg.style.transform = "scale(0)";
+    })
+
+
+</script>
+
+</html>
