@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .slider {
+            width: 100%;
+            border: 1px solid black;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .box {
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="slider">
+            <div class="box">
+                <img src="https://picsum.photos/id/231/1000/500" alt="">
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/232/1000/500" alt="">
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/233/1000/500" alt="">
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/234/1000/500" alt="">
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/235/1000/500" alt="">
+            </div>
+            <div class="box">
+                <img src="https://picsum.photos/id/236/1000/500" alt="">
+            </div>
+        </div>
+        <div>
+            <button onclick="prev()">Previous</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+
+
+</body>
+<script>
+
+    var boxes = document.querySelectorAll('.box');
+    var count = 0;
+
+    function next() {
+        if (count < boxes.length - 1) {
+            count++;
+            for (var box of boxes) {
+                box.style.transform = `translate(-${count * 100}%)`;//
+            }
+        }
+    }
+
+    function prev() {
+        if (count >= 1) {
+            count--;
+            for (var box of boxes) {
+                box.style.transform = `translate(-${count * 100}%)`;
+            }
+        }
+
+    }
+
+
+
+
+</script>
+
+</html>

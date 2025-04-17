@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="heading">1</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">reset</button>
+</body>
+<script>
+
+    var start = document.querySelector('#start');
+    var heading = document.querySelector('#heading');
+    var stop = document.querySelector('#stop');
+    var reset = document.querySelector('#reset');
+    var intervalHandeler;
+
+    start.addEventListener(
+        'click', function () {
+            var num = heading.innerText;
+            intervalHandeler = setInterval(
+                function () {
+                    heading.innerText = num;
+                    num++;
+                }, 100
+            )
+        }
+    )
+
+    stop.addEventListener(
+        'click', function () {
+            clearInterval(intervalHandeler);
+        }
+    )
+
+    reset.addEventListener(
+        'click', function () {
+            clearInterval(intervalHandeler);
+            heading.innerText = 0;
+        }
+    )
+
+
+</script>
+
+</html>
