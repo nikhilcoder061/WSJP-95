@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            max-width: 1320px;
+            padding: 20px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .box {
+            border-radius: 10px;
+            width: 23%;
+            height: 150px;
+            background-color: lightcoral;
+        }
+
+        @media only screen and (min-width:576px) and (max-width:767px) {
+            .box {
+                width: 48%;
+            }
+        }
+
+        @media only screen and (min-width:0px) and (max-width:575px) {
+            .box {
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+
+</body>
+
+</html>

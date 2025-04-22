@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .main {
+            max-width: 1320px;
+            min-width: 400px;
+            padding: 10px;
+            background-color: red;
+            margin: auto;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:575px) {
+            .main {
+                background-color: blue;
+                color: white;
+            }
+        }
+
+        @media only screen and (min-width:576px) and (max-width:767px) {
+            .main {
+                background-color: green;
+                color: palevioletred;
+            }
+        }
+        @media only screen and (min-width:768px) and (max-width:991px) {
+            .main {
+                background-color: purple;
+                color: white;
+                text-decoration: underline;
+            }
+        }
+        @media only screen and (min-width:991px) and (max-width:1170px) {
+            .main {
+                background-color: aqua;
+                color: red;
+                font-style: italic;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, expedita eius, sapiente explicabo fuga cumque
+        vitae tenetur voluptatem, minus quas doloremque facilis exercitationem porro dolorem quibusdam praesentium.
+        Quam, quia est.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, expedita eius, sapiente
+        explicabo fuga cumque vitae tenetur voluptatem, minus quas doloremque facilis exercitationem porro dolorem
+        quibusdam praesentium. Quam, quia est.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, expedita
+        eius, sapiente explicabo fuga cumque vitae tenetur voluptatem, minus quas doloremque facilis exercitationem
+        porro dolorem quibusdam praesentium. Quam, quia est.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Omnis, expedita eius, sapiente explicabo fuga cumque vitae tenetur voluptatem, minus quas doloremque facilis
+        exercitationem porro dolorem quibusdam praesentium. Quam, quia est.Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Omnis, expedita eius, sapiente explicabo fuga cumque vitae tenetur voluptatem, minus quas
+        doloremque facilis exercitationem porro dolorem quibusdam praesentium. Quam, quia est.
+    </div>
+</body>
+
+</html>
