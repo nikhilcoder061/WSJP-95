@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .main {
+            width: 700px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box {
+            width: 200px;
+            background-color: orange;
+            height: 100px;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div data-aos="fade-up" class="box"></div>
+        <div data-aos="fade-down" class="box"></div>
+        <div class="box"></div>
+        <div class="box" id="mainBox"></div>
+        <div data-aos="flip-left" data-aos-duration="2000" data-aos-easing="linear" data-aos-anchor-placement="top-top"
+            class="box">
+        </div>
+        <div data-aos="fade-down" class="box"></div>
+        <div data-aos="fade-up" class="box"></div>
+    </div>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</html>
